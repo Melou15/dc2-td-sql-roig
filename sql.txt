@@ -1,4 +1,16 @@
 mysql> SELECT * FROM villes_france_free WHERE ville_nom LIKE 'J%';
 
 
-mysql> SELECT * FROM villes_france_free WHERE 
+mysql> SELECT * FROM villes_france_free ORDER BY ville_population_2012 DESC LIMIT 10;
+
+
+mysql> SELECT * FROM villes_france_free ORDER BY ville_surface ASC LIMIT 50;
+
+
+mysql> SELECT * FROM departement WHERE departement_code LIKE "97%";
+
+mysql> SELECT * FROM ville_france_free ORDER BY ville_population_2012 DESC LIMIT 10 AND WHERE ville_nom LIKE '%';
+
+
+
+SELECT * FROM departement JOIN villes_france_free ON departement.departement_nom = villes_france_free.ville_departement ORDER BY ville_population_2012 DESC LIMIT 10;
